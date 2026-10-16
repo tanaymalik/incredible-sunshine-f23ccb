@@ -1,0 +1,66 @@
+# Static site: publish the repository root as-is.
+[build]
+  publish = "."
+
+# Send legacy .html URLs to their clean, extensionless equivalents.
+# force = true is required because the .html files exist on disk.
+[[redirects]]
+  from = "/index.html"
+  to = "/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/consultations.html"
+  to = "/consultations"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/about.html"
+  to = "/about"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/testimonials.html"
+  to = "/testimonials"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/contact.html"
+  to = "/contact"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/privacy.html"
+  to = "/privacy"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/accessibility.html"
+  to = "/accessibility"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "/astrologer-in-noida.html"
+  to = "/astrologer-in-noida"
+  status = 301
+  force = true
+
+# Security headers. The CSP deliberately restricts only framing, plugins,
+# base URLs and form targets, so Google Fonts, the Calendly booking widget
+# and Netlify RUM keep loading without an allowlist that could break them.
+[[headers]]
+  for = "/*"
+  [headers.values]
+    Content-Security-Policy = "base-uri 'self'; object-src 'none'; frame-ancestors 'self'; form-action 'self'; upgrade-insecure-requests"
+    X-Content-Type-Options = "nosniff"
+    X-Frame-Options = "SAMEORIGIN"
+    Referrer-Policy = "strict-origin-when-cross-origin"
+    Permissions-Policy = "camera=(), microphone=(), geolocation=(), payment=()"
+    Strict-Transport-Security = "max-age=31536000"
