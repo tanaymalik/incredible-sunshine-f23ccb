@@ -162,19 +162,19 @@ button{ font-family:inherit; }
 .nav-toggle{
   display:none;
   background:none; border:none; color:var(--cream-text);
-  width:34px; height:26px; position:relative; cursor:pointer;
+  width:44px; height:44px; flex:0 0 44px; position:relative; cursor:pointer;
   padding:0;
 }
 .nav-toggle span, .nav-toggle span::before, .nav-toggle span::after{
   content:""; position:absolute; left:0; right:0; height:1px; background:var(--gold-bright);
   transition:transform .3s ease, opacity .3s ease;
 }
-.nav-toggle span{ top:12px; }
-.nav-toggle span::before{ top:-9px; }
-.nav-toggle span::after{ top:9px; }
+.nav-toggle span{ top:21px; left:10px; right:10px; }
+.nav-toggle span::before{ top:-7px; }
+.nav-toggle span::after{ top:7px; }
 .nav-toggle.is-open span{ background:transparent; }
-.nav-toggle.is-open span::before{ transform:translateY(9px) rotate(45deg); }
-.nav-toggle.is-open span::after{ transform:translateY(-9px) rotate(-45deg); }
+.nav-toggle.is-open span::before{ transform:translateY(7px) rotate(45deg); }
+.nav-toggle.is-open span::after{ transform:translateY(-7px) rotate(-45deg); }
 
 .mobile-panel{
   position:fixed; inset:0; z-index:99;
@@ -190,12 +190,28 @@ button{ font-family:inherit; }
   font-family:var(--font-display); font-size:1.9rem; padding:14px 0;
   border-bottom:1px solid var(--line); color:var(--cream-text);
 }
-.mobile-panel .btn{ margin-top:28px; align-self:flex-start; }
+.mobile-panel .btn{
+  margin-top:28px; align-self:flex-start;
+  font-family:var(--font-body); font-size:0.95rem; line-height:1.35;
+  padding:15px 20px; border-bottom:0;
+}
 
 @media (max-width: 900px){
   .nav-links{ display:none; }
   .nav-cta .btn-ghost{ display:none; }
   .nav-toggle{ display:block; }
+}
+
+@media (max-width: 600px){
+  .site-header{ padding:14px 0; }
+  .site-header.is-scrolled{ padding:10px 0; }
+  .site-header .container{ gap:12px; }
+  .brand{ min-width:0; gap:9px; }
+  .brand img{ height:30px; }
+  .brand-word{ font-size:1rem; letter-spacing:0.05em; }
+  .nav-cta{ gap:0; }
+  .nav-cta .btn-primary{ display:none; }
+  .mobile-panel{ padding-top:96px; padding-bottom:32px; }
 }
 
 /* ==========================================================================
