@@ -46,6 +46,13 @@
   status = 301
   force = true
 
+# Preserve the former privacy-policy URL found in Search Console.
+[[redirects]]
+  from = "/privacy-policy"
+  to = "/privacy"
+  status = 301
+  force = true
+
 [[redirects]]
   from = "/astrologer-in-noida.html"
   to = "/astrologer-in-noida"
