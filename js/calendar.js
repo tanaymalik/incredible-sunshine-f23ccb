@@ -9,6 +9,11 @@
   var statusText = loading.querySelector("p");
   var spinner = loading.querySelector(".calendar-spinner");
 
+  window.addEventListener("message", function (event) {
+    if (event.origin !== "https://calendly.com" || !event.data || event.data.event !== "calendly.event_scheduled") return;
+    window.location.assign("/thank-you");
+  });
+
   function showSlowMessage() {
     if (loading.hidden) return;
     if (statusText) statusText.textContent = "Calendly is taking longer than expected. You can open the booking calendar directly below.";
