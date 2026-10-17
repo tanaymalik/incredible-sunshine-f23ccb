@@ -343,7 +343,7 @@ button{ font-family:inherit; }
 .service-row:nth-child(even) > *{ direction:ltr; }
 .service-media{ aspect-ratio:4/3.4; overflow:hidden; border-radius:14px; }
 .service-media img{ width:100%; height:100%; object-fit:cover; }
-.service-index{ font-family:var(--font-display); font-style:italic; color:var(--gold-dim); font-size:1rem; margin-bottom:14px; }
+.service-index{ font-family:var(--font-display); font-style:italic; color:var(--gold); font-size:1rem; margin-bottom:14px; }
 .service-body h3{ font-size:clamp(1.6rem,2.6vw,2.1rem); }
 .service-body p{ margin-top:18px; color:var(--stone); font-size:1.02rem; max-width:54ch; }
 .service-body .split-cta{ margin-top:26px; }
@@ -489,3 +489,62 @@ ol.steps{ margin:0; padding:0; list-style:none; }
 .about-values p + p{ margin-top:18px; }
 .visually-hidden{ position:absolute !important; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 @media (max-width:560px){ .local-note{ padding:24px; } .notice{ padding:20px; } }
+
+/* Mobile-first refinements: comfortable reading, useful tap targets, and calmer flow. */
+@media (max-width:600px){
+  .hero{ min-height:100vh; min-height:100svh; padding-top:118px; padding-bottom:56px; }
+  .hero-media img{ object-position:68% center; }
+  .hero-desktop-break{ display:none; }
+  .hero h1{ font-size:clamp(2.15rem,9vw,3.1rem); max-width:15ch; }
+  .hero-sub{ margin-top:20px; font-size:1.04rem; line-height:1.65; }
+  .hero-actions{ display:grid; grid-template-columns:1fr; gap:12px; margin-top:28px; }
+  .hero-actions .btn{ width:100%; min-height:50px; justify-content:center; }
+  .hero-trust{ margin-top:30px; padding-top:18px; font-size:.82rem; line-height:1.65; }
+  .trust-row li{ flex:1 1 45%; padding:18px 10px; border-right:0; border-bottom:1px solid var(--line); font-size:.94rem; }
+  .trust-row li:nth-last-child(-n+2){ border-bottom:0; }
+  .page-hero{ padding:132px 0 54px; }
+  .page-hero h1{ font-size:clamp(2rem,8.5vw,3.1rem); max-width:15ch; }
+  .page-hero p{ margin-top:18px; font-size:1rem; line-height:1.7; }
+  .section{ padding-top:72px; padding-bottom:72px; }
+  .split, .split.reverse{ gap:28px; }
+  .split-media img{ border-radius:12px; }
+  .service-row{ grid-template-columns:1fr; gap:24px; padding:34px 0; direction:ltr; }
+  .service-row:nth-child(even){ direction:ltr; }
+  .service-row:nth-child(even) > *{ direction:ltr; }
+  .service-media{ aspect-ratio:1.25 / 1; border-radius:12px; }
+  .service-body h3{ font-size:1.5rem; line-height:1.3; }
+  .service-body p{ font-size:1rem; line-height:1.7; }
+  .local-note{ align-items:flex-start; flex-direction:column; }
+  .step{ padding:28px 24px; }
+  .site-footer{ padding-top:64px; }
+  .footer-grid{ gap:32px; padding-bottom:40px; }
+  .footer-legal{ flex-wrap:wrap; gap:12px 18px; }
+  .nav-toggle{ min-width:44px; min-height:44px; }
+  .mobile-panel a{ min-height:52px; display:flex; align-items:center; }
+  .mobile-panel .btn{ min-height:50px; justify-content:center; }
+}
+
+@media (max-width:600px){
+  .site-header{ padding:calc(14px + env(safe-area-inset-top)) 0 14px; }
+  .site-header.is-scrolled{ padding:calc(10px + env(safe-area-inset-top)) 0 10px; }
+  .mobile-panel{ padding-top:calc(96px + env(safe-area-inset-top)); padding-bottom:calc(32px + env(safe-area-inset-bottom)); }
+  .site-footer{ padding-bottom:calc(32px + env(safe-area-inset-bottom)); }
+}
+
+.booking-widget-wrap{ width:100%; min-width:0; }
+.calendly-inline-widget{ width:100%; min-width:0 !important; }
+@media (max-width:600px){
+  .mobile-panel{ overflow-y:auto; overscroll-behavior:contain; -webkit-overflow-scrolling:touch; }
+  .booking-widget-wrap{ width:calc(100% + var(--pad) + var(--pad)); margin-left:calc(0px - var(--pad)); }
+  .calendly-inline-widget{ border-right:0; border-left:0; border-radius:0; }
+}
+
+.nav-cta-compact{ display:none; }
+@media (max-width:600px){
+  .site-header .container{ gap:8px; }
+  .nav-cta{ gap:6px; }
+  .nav-cta .btn-primary{ display:inline-flex; align-items:center; justify-content:center; min-height:44px; padding:9px 10px; font-size:.8rem; }
+  .nav-cta-label{ display:none; }
+  .nav-cta-compact{ display:inline; }
+  .section-head{ margin-bottom:34px; }
+}
