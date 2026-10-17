@@ -234,3 +234,10 @@
     margin: 17px 0 0;
   }
 }
+
+@media (max-width:760px){
+  .journal-card{ min-height:0; padding:26px 22px; }
+  .journal-body p,
+  .journal-body li{ font-size:1rem; line-height:1.78; }
+  .journal-cta .btn{ width:100%; min-height:50px; justify-content:center; }
+}
