@@ -99,6 +99,7 @@ fbq('track', 'PageView');
 <!-- End Meta Pixel Code -->
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <!-- Meta Pixel Code (noscript) -->
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=961168657044900&ev=PageView&noscript=1"
@@ -107,7 +108,7 @@ alt=""></noscript>
 <header class="site-header" id="siteHeader">
   <div class="container">
     <a href="/" class="brand" aria-label="Vedtaara home">
-      <img src="/assets/logo-mark.webp" alt="Vedtaara — eye and moon emblem">
+      <img src="/assets/logo-mark.webp" width="989" height="885" alt="Vedtaara — eye and moon emblem">
       <span class="brand-word">VEDTAARA</span>
     </a>
     <nav aria-label="Primary">
@@ -122,13 +123,13 @@ alt=""></noscript>
     </nav>
     <div class="nav-cta">
       <a href="/contact" class="btn btn-primary" aria-label="Book a consultation"><span class="nav-cta-label">Book a Consultation</span><span class="nav-cta-compact" aria-hidden="true">Book</span></a>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
         <span></span>
       </button>
     </div>
   </div>
 </header>
-<div class="mobile-panel" id="mobilePanel">
+<div class="mobile-panel" id="mobilePanel" role="navigation" aria-label="Mobile" aria-hidden="true">
   <a href="/">Home</a>
 <a href="/consultations">Consultations</a>
 <a href="/about">About</a>
@@ -138,11 +139,12 @@ alt=""></noscript>
   <a href="/contact" class="btn btn-primary">Book a Consultation</a>
 </div>
 
+<main id="main">
 <section class="hero">
-  <div class="hero-media"><img src="/assets/hero-consultation.webp" alt="A calm, warmly lit consultation room with books, tea and an open notebook" loading="eager" fetchpriority="high"></div>
+  <div class="hero-media"><img src="/assets/hero-consultation.webp" width="1600" height="900" alt="A calm, warmly lit consultation room with books, tea and an open notebook" loading="eager" fetchpriority="high"></div>
   <div class="container hero-content">
     <p class="hero-kicker">Vedic astrology &middot; numerology &middot; tarot</p>
-    <h1>Find Clarity.<br class="hero-desktop-break">Understand Your Path.</h1>
+    <h1>Find Clarity.<br class="hero-desktop-break"> Understand Your Path.</h1>
     <p class="hero-sub">Personalized Vedic astrology, numerology and tarot consultations to help you navigate relationships, career, finances and life&rsquo;s biggest decisions.</p>
     <div class="hero-actions">
       <a href="/contact" class="btn btn-primary">Book a Consultation</a>
@@ -167,7 +169,7 @@ alt=""></noscript>
   <div class="container">
     <div class="split">
       <div class="split-media">
-        <img src="/assets/vedic-study.webp" alt="An open reference book and notebook on a sunlit wooden desk" loading="lazy" decoding="async">
+        <img src="/assets/vedic-study.webp" width="1448" height="1086" alt="An open reference book and notebook on a sunlit wooden desk" loading="lazy" decoding="async">
       </div>
       <div>
         <h2>Ancient Wisdom.<br>Practical Guidance.<br>Real Clarity.</h2>
@@ -189,7 +191,7 @@ alt=""></noscript>
         <div class="split-cta"><a href="/about" class="text-link">Meet Ridhima</a></div>
       </div>
       <div class="split-media">
-        <img src="/assets/ridhima-portrait.webp" alt="Ridhima Sehgal, astrologer and founder of Vedtaara, seated with a Lal Kitab book" loading="lazy" decoding="async">
+        <img src="/assets/ridhima-portrait.webp" width="754" height="812" alt="Ridhima Sehgal, astrologer and founder of Vedtaara, seated with a Lal Kitab book" loading="lazy" decoding="async">
       </div>
     </div>
   </div>
@@ -229,28 +231,31 @@ alt=""></noscript>
     </div>
 
     <div class="service-row">
-      <div class="service-media"><img src="/assets/birth-chart-photo.webp" alt="A clean North Indian birth-chart layout drawn on handmade paper beside a fountain pen" loading="lazy" decoding="async"></div>
+      <div class="service-media"><img src="/assets/birth-chart-photo.webp" width="1448" height="1086" alt="A clean North Indian birth-chart layout drawn on handmade paper beside a fountain pen" loading="lazy" decoding="async"></div>
       <div class="service-body">
-        <div class="service-index">Birth Chart Reading</div>
-        <h3>Explore the deeper patterns, karmic lessons and purpose reflected in your birth chart. Understand where you are, what life is teaching you, and where your path may lead &mdash; with greater clarity, self-trust and conscious choice.</h3>
+        <div class="service-index">01</div>
+        <h3>Birth Chart Reading</h3>
+        <p>Explore the deeper patterns, karmic lessons and purpose reflected in your birth chart. Understand where you are, what life is teaching you, and where your path may lead &mdash; with greater clarity, self-trust and conscious choice.</p>
         <div class="split-cta"><a href="/consultations" class="text-link">Learn more</a></div>
       </div>
     </div>
 
     <div class="service-row">
-      <div class="service-media"><img src="/assets/numerology-chart.svg" alt="A traditional 3 by 3 numerology grid with the numbers 3, 1, 9, 6, 7, 5, 2, 8 and 4" loading="lazy" decoding="async"></div>
+      <div class="service-media"><img src="/assets/numerology-chart.svg" width="1024" height="1024" alt="A traditional 3 by 3 numerology grid with the numbers 3, 1, 9, 6, 7, 5, 2, 8 and 4" loading="lazy" decoding="async"></div>
       <div class="service-body">
-        <div class="service-index">Vedic Numerology</div>
-        <h3>Explore the energy of numbers connected to your birth date and name. Understand how these energies may influence you and how numerology can guide you with name selection or correction, helping you feel more aligned, gain inner strength and approach life with a clearer perspective.</h3>
+        <div class="service-index">02</div>
+        <h3>Vedic Numerology</h3>
+        <p>Explore the energy of numbers connected to your birth date and name. Understand how these energies may influence you and how numerology can guide you with name selection or correction, helping you feel more aligned, gain inner strength and approach life with a clearer perspective.</p>
         <div class="split-cta"><a href="/consultations" class="text-link">Learn more</a></div>
       </div>
     </div>
 
     <div class="service-row">
-      <div class="service-media"><img src="/assets/tarot-reading.webp" alt="Three illustrated tarot cards laid out on a wooden desk beside a notebook" loading="lazy" decoding="async"></div>
+      <div class="service-media"><img src="/assets/tarot-reading.webp" width="1448" height="1086" alt="Three illustrated tarot cards laid out on a wooden desk beside a notebook" loading="lazy" decoding="async"></div>
       <div class="service-body">
-        <div class="service-index">Tarot Reading</div>
-        <h3>Every Tarot card carries its own emotional and spiritual meaning. Through the cards, we explore different perspectives on what you may be experiencing, helping you connect with your subconscious, understand your emotions and see situations with greater clarity.</h3>
+        <div class="service-index">03</div>
+        <h3>Tarot Reading</h3>
+        <p>Every Tarot card carries its own emotional and spiritual meaning. Through the cards, we explore different perspectives on what you may be experiencing, helping you connect with your subconscious, understand your emotions and see situations with greater clarity.</p>
         <div class="split-cta"><a href="/consultations" class="text-link">Learn more</a></div>
       </div>
     </div>
@@ -344,11 +349,12 @@ alt=""></noscript>
   </div>
 </section>
 
+</main>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="/assets/logo-mark.webp" alt="Vedtaara emblem">
+        <img src="/assets/logo-mark.webp" width="989" height="885" alt="Vedtaara emblem">
         <p>Personalized Vedic astrology, numerology &amp; tarot guidance with Ridhima Sehgal.</p>
       </div>
       <div class="footer-col">
