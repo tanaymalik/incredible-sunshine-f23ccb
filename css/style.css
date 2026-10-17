@@ -378,14 +378,18 @@ button{ font-family:inherit; }
 /* ==========================================================================
    Testimonials
    ========================================================================== */
-.quote-grid{ display:grid; grid-template-columns:repeat(3,1fr); gap:1px; background:var(--line); border:1px solid var(--line); }
-.quote-card{ background:var(--ink-2); padding:44px 36px; display:flex; flex-direction:column; }
-.quote-mark{ font-family:var(--font-display); font-style:italic; font-size:3rem; color:var(--gold-dim); line-height:1; margin-bottom:6px; }
-.quote-card p.quote-text{ color:var(--cream-text); font-size:1.02rem; line-height:1.65; flex:1; }
-.quote-attrib{ margin-top:26px; padding-top:18px; border-top:1px solid var(--line); font-size:0.9rem; }
-.quote-attrib .name{ font-family:var(--font-display); font-size:1.05rem; color:var(--gold-bright); }
-.quote-attrib .loc{ color:var(--stone-dim); margin-top:2px; }
-@media (max-width:900px){ .quote-grid{ grid-template-columns:1fr; } }
+.quote-grid{ display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+.quote-card{ position:relative; background:linear-gradient(145deg,var(--ink-2),#17140f); border:1px solid var(--line); border-radius:4px; padding:30px 28px; display:flex; flex-direction:column; min-height:310px; }
+.quote-card-topline{ display:flex; align-items:center; justify-content:space-between; gap:12px; margin-bottom:18px; }
+.quote-avatar{ width:44px; height:44px; flex:0 0 44px; display:grid; place-items:center; border-radius:50%; border:1px solid var(--gold-dim); background:rgba(196,157,91,.1); color:var(--gold-bright); font-family:var(--font-display); font-size:.92rem; }
+.quote-topic{ display:inline-flex; align-items:center; padding:6px 10px; border:1px solid var(--line); border-radius:99px; color:var(--gold-bright); font-size:.69rem; letter-spacing:.06em; line-height:1.3; text-align:right; text-transform:uppercase; }
+.quote-mark{ font-family:var(--font-display); font-style:italic; font-size:2.4rem; color:var(--gold-dim); line-height:1; margin-bottom:10px; }
+.quote-card p.quote-text{ color:var(--cream-text); font-size:.98rem; line-height:1.72; flex:1; }
+.quote-attrib{ margin-top:22px; padding-top:16px; border-top:1px solid var(--line); font-size:0.9rem; }
+.quote-attrib .name{ font-family:var(--font-display); font-size:1.02rem; color:var(--gold-bright); }
+.quote-attrib .loc{ color:var(--stone-dim); margin-top:3px; }
+@media (max-width:900px){ .quote-grid{ grid-template-columns:repeat(2,minmax(0,1fr)); } }
+@media (max-width:600px){ .quote-grid{ grid-template-columns:1fr; } .quote-card{ min-height:0; padding:26px 24px; } }
 
 
 /* ==========================================================================
