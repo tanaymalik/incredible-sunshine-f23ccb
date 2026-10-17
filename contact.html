@@ -25,6 +25,8 @@
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://assets.calendly.com">
+<link rel="preconnect" href="https://calendly.com">
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,300;0,400;0,500;0,600;1,400;1,500&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="/css/style.css">
 <!-- Meta Pixel Code -->
@@ -43,6 +45,7 @@ fbq('track', 'PageView');
 <!-- End Meta Pixel Code -->
 </head>
 <body>
+<a class="skip-link" href="#main">Skip to content</a>
 <!-- Meta Pixel Code (noscript) -->
 <noscript><img height="1" width="1" style="display:none"
 src="https://www.facebook.com/tr?id=961168657044900&ev=PageView&noscript=1"
@@ -51,7 +54,7 @@ alt=""></noscript>
 <header class="site-header" id="siteHeader">
   <div class="container">
     <a href="/" class="brand" aria-label="Vedtaara home">
-      <img src="/assets/logo-mark.webp" alt="Vedtaara — eye and moon emblem">
+      <img src="/assets/logo-mark.webp" width="989" height="885" alt="Vedtaara — eye and moon emblem">
       <span class="brand-word">VEDTAARA</span>
     </a>
     <nav aria-label="Primary">
@@ -66,13 +69,13 @@ alt=""></noscript>
     </nav>
     <div class="nav-cta">
       <a href="/contact" class="btn btn-primary" aria-label="Book a consultation"><span class="nav-cta-label">Book a Consultation</span><span class="nav-cta-compact" aria-hidden="true">Book</span></a>
-      <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
+      <button type="button" class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false" aria-controls="mobilePanel">
         <span></span>
       </button>
     </div>
   </div>
 </header>
-<div class="mobile-panel" id="mobilePanel">
+<div class="mobile-panel" id="mobilePanel" role="navigation" aria-label="Mobile" aria-hidden="true">
   <a href="/">Home</a>
 <a href="/consultations">Consultations</a>
 <a href="/about">About</a>
@@ -82,6 +85,7 @@ alt=""></noscript>
   <a href="/contact" class="btn btn-primary">Book a Consultation</a>
 </div>
 
+<main id="main">
 <section class="page-hero">
   <div class="container">
     <p class="eyebrow">Contact</p>
@@ -92,8 +96,8 @@ alt=""></noscript>
 
 <section class="section">
   <div class="container">
-    <div class="split" style="align-items:flex-start;">
-      <div>
+    <div class="split contact-layout" style="align-items:flex-start;">
+      <div class="contact-info">
         <h2 style="font-size:1.6rem;">Book an Appointment for Readings and Consultations</h2>
         <ul class="contact-info-list">
           <li>
@@ -111,33 +115,34 @@ alt=""></noscript>
         </ul>
       </div>
 
-      <div>
+      <div class="contact-booking">
         <p class="eyebrow" style="margin-bottom:24px;">Select a date and time below to book your consultation.</p>
         <!-- Calendly inline widget begin -->
 <div class="booking-widget-wrap">
+  <div class="calendly-loading" id="calendlyLoading" role="status" aria-live="polite">
+    <span class="calendar-spinner" aria-hidden="true"></span>
+    <p>Preparing the secure booking calendar&hellip;</p>
+    <a href="https://calendly.com/vedtaara05/30min?background_color=0b0b08&amp;text_color=f3ecdb&amp;primary_color=c9a34c" target="_blank" rel="noopener">Open the booking calendar directly <span aria-hidden="true">↗</span></a>
+  </div>
   <div
     class="calendly-inline-widget"
     data-url="https://calendly.com/vedtaara05/30min?background_color=0b0b08&text_color=f3ecdb&primary_color=c9a34c"
     style="width:100%;min-width:0;height:700px;">
   </div>
 </div>
-
-<script
-  type="text/javascript"
-  src="https://assets.calendly.com/assets/external/widget.js"
-  async>
-</script>
+<p class="booking-fallback">Prefer a full-page scheduler? <a href="https://calendly.com/vedtaara05/30min?background_color=0b0b08&amp;text_color=f3ecdb&amp;primary_color=c9a34c" target="_blank" rel="noopener">Open Calendly directly <span aria-hidden="true">↗</span></a></p>
 <!-- Calendly inline widget end -->
       </div>
     </div>
   </div>
 </section>
 
+</main>
 <footer class="site-footer">
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <img src="/assets/logo-mark.webp" alt="Vedtaara emblem">
+        <img src="/assets/logo-mark.webp" width="989" height="885" alt="Vedtaara emblem">
         <p>Personalized Vedic astrology, numerology &amp; tarot guidance with Ridhima Sehgal.</p>
       </div>
       <div class="footer-col">
@@ -176,5 +181,6 @@ alt=""></noscript>
   </div>
 </footer>
 <script src="/js/main.js"></script>
+<script src="/js/calendar.js" defer></script>
 </body>
 </html>
